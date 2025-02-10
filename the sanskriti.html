@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskriti - Bharatanatyam Dance Classes</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #fce4ec; }
+        header { background-color: #ad1457; color: white; padding: 20px; font-size: 24px; }
+        
+        section { margin: 20px; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        img { width: 80%; max-width: 500px; border-radius: 10px; }
+        .btn { background-color: #d81b60; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; }
+        .form-container { width: 50%; margin: auto; }
+        input, button { width: 80%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        button { background-color: #d81b60; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header>
+        Sanskriti - Bharatanatyam Dance Academy
+    </header>
+
+    <!-- Home Section -->
+    <section>
+        <h2>About Sangeetha Ed</h2>
+        <p>Sangeetha Ed is a renowned Bharatanatyam dancer and instructor with years of experience.</p>
+        <img src="https://your-image-link.com/image.jpg" alt="Bharatanatyam Dance">
+
+        
+    </section>
+
+    <section>
+        <h2>Join Our Online Classes</h2>
+        <p>Learn Bharatanatyam from the comfort of your home with our structured online classes.</p>
+        <a href="#register" class="btn">Join Now</a>
+    </section>
+
+    <section>
+        <h2>Learn Bharatanatyam</h2>
+        <p>Our lessons cover basic to advanced Bharatanatyam techniques, postures, and expressions.</p>
+        <img src="bharatanatyam-students.jpg" alt="Students performing Bharatanatyam">
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register">
+        <h2>Register for Classes</h2>
+        <div class="form-container">
+            <form id="registrationForm">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your Email" required><br>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Confirmation Section (Hidden initially) -->
+    <section id="confirmation" style="display: none;">
+        <h2>Registration Confirmed!</h2>
+        <p>Your classes are scheduled on <strong>Saturday and Monday from 7:00 PM to 8:30 PM</strong>.</p>
+        <p>Please proceed with the payment to confirm your enrollment.</p>
+        <a href="payment.html" class="btn">Proceed to Payment</a>
+    </section>
+
+    <footer>
+        <p>Visit us at <a href="https://www.sanskriti.com" target="_blank">sanskriti.com</a></p>
+    </footer>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            document.getElementById("register").style.display = "none"; // Hide registration
+            document.getElementById("confirmation").style.display = "block"; // Show confirmation
+        });
+    </script>
+</body>
+</html>
